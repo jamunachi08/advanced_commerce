@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:channel_code",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "channel_name",
+  "channel_code",
+  "is_active",
+  "column_break_1",
+  "currency",
+  "default_price_list",
+  "default_warehouse",
+  "payment_provider",
+  "section_break_1",
+  "storefront_domain",
+  "checkout_requires_login",
+  "allow_guest_checkout"
+ ],
+ "fields": [
+  {"fieldname": "channel_name", "fieldtype": "Data", "in_list_view": 1, "label": "Channel Name", "reqd": 1},
+  {"fieldname": "channel_code", "fieldtype": "Data", "label": "Channel Code", "reqd": 1, "unique": 1, "description": "Short slug used by the storefront API, e.g. 'us-web', 'eu-app', 'b2b'"},
+  {"default": "1", "fieldname": "is_active", "fieldtype": "Check", "in_list_view": 1, "label": "Is Active"},
+  {"fieldname": "column_break_1", "fieldtype": "Column Break"},
+  {"fieldname": "currency", "fieldtype": "Link", "in_list_view": 1, "label": "Currency", "options": "Currency", "reqd": 1},
+  {"fieldname": "default_price_list", "fieldtype": "Link", "label": "Default Price List", "options": "Price List", "reqd": 1},
+  {"fieldname": "default_warehouse", "fieldtype": "Link", "label": "Default Warehouse", "options": "Warehouse"},
+  {"default": "manual", "description": "Key of a registered PaymentProvider adapter (see advanced_commerce/api/payments.py)", "fieldname": "payment_provider", "fieldtype": "Data", "label": "Payment Provider"},
+  {"fieldname": "section_break_1", "fieldtype": "Section Break", "label": "Storefront"},
+  {"fieldname": "storefront_domain", "fieldtype": "Data", "label": "Storefront Domain"},
+  {"default": "0", "fieldname": "checkout_requires_login", "fieldtype": "Check", "label": "Checkout Requires Login"},
+  {"default": "1", "fieldname": "allow_guest_checkout", "fieldtype": "Check", "label": "Allow Guest Checkout"}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Advanced Commerce",
+ "name": "Sales Channel",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Commerce Manager", "share": 1, "write": 1},
+  {"read": 1, "role": "Commerce API"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

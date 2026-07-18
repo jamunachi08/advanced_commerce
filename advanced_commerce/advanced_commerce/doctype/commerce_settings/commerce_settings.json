@@ -1,0 +1,26 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["default_sales_channel", "cart_expiry_days", "enable_guest_carts"],
+ "fields": [
+  {"fieldname": "default_sales_channel", "fieldtype": "Link", "label": "Default Sales Channel", "options": "Sales Channel"},
+  {"default": "14", "fieldname": "cart_expiry_days", "fieldtype": "Int", "label": "Days Before Cart Marked Abandoned"},
+  {"default": "1", "fieldname": "enable_guest_carts", "fieldtype": "Check", "label": "Enable Guest Carts"}
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Advanced Commerce",
+ "name": "Commerce Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "read": 1, "write": 1, "role": "Commerce Manager"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

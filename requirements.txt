@@ -1,0 +1,1 @@
+# Runs inside a Frappe bench, frappe/erpnext already provide the base deps

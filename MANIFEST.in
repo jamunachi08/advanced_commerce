@@ -1,0 +1,11 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+recursive-include advanced_commerce *.json
+recursive-include advanced_commerce *.md
+recursive-include advanced_commerce *.py
+recursive-include advanced_commerce *.js
+recursive-include advanced_commerce *.css
+recursive-include advanced_commerce *.html
+recursive-exclude advanced_commerce *.pyc

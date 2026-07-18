@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["event", "target_url", "secret", "enabled", "section_break_1", "last_delivery_status", "last_delivered_at", "delivery_log"],
+ "fields": [
+  {"fieldname": "event", "fieldtype": "Data", "in_list_view": 1, "label": "Event", "reqd": 1, "description": "e.g. 'sales_order.confirmed', 'payment_entry.confirmed'"},
+  {"fieldname": "target_url", "fieldtype": "Data", "in_list_view": 1, "label": "Target URL", "reqd": 1},
+  {"fieldname": "secret", "fieldtype": "Password", "label": "Signing Secret"},
+  {"default": "1", "fieldname": "enabled", "fieldtype": "Check", "in_list_view": 1, "label": "Enabled"},
+  {"fieldname": "section_break_1", "fieldtype": "Section Break", "label": "Delivery Status"},
+  {"fieldname": "last_delivery_status", "fieldtype": "Data", "label": "Last Delivery Status", "read_only": 1},
+  {"fieldname": "last_delivered_at", "fieldtype": "Datetime", "label": "Last Delivered At", "read_only": 1},
+  {"fieldname": "delivery_log", "fieldtype": "Code", "label": "Recent Delivery Log", "options": "JSON", "read_only": 1}
+ ],
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Advanced Commerce",
+ "name": "Webhook Subscription",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Commerce Manager", "share": 1, "write": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

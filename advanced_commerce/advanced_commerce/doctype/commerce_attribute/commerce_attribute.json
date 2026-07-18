@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:attribute_code",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": ["attribute_name", "attribute_code", "input_type", "is_variant_attribute", "is_filterable", "values"],
+ "fields": [
+  {"fieldname": "attribute_name", "fieldtype": "Data", "in_list_view": 1, "label": "Attribute Name", "reqd": 1},
+  {"fieldname": "attribute_code", "fieldtype": "Data", "label": "Attribute Code", "reqd": 1, "unique": 1, "description": "Slug, e.g. 'color', 'size', 'material'"},
+  {"default": "Dropdown", "fieldname": "input_type", "fieldtype": "Select", "label": "Input Type", "options": "Dropdown\nMulti-Select\nBoolean\nNumeric\nText\nSwatch"},
+  {"default": "1", "description": "If checked, this attribute can be used to generate product variants (e.g. Size, Color)", "fieldname": "is_variant_attribute", "fieldtype": "Check", "label": "Used For Variants"},
+  {"default": "1", "description": "If checked, storefronts can offer this attribute as a facet/filter", "fieldname": "is_filterable", "fieldtype": "Check", "label": "Filterable On Storefront"},
+  {"fieldname": "values", "fieldtype": "Table", "label": "Values", "options": "Commerce Attribute Value"}
+ ],
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Advanced Commerce",
+ "name": "Commerce Attribute",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Commerce Manager", "share": 1, "write": 1},
+  {"read": 1, "role": "Commerce API"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

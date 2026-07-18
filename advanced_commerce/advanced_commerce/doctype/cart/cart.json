@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_channel", "customer", "session_id", "status", "column_break_1",
+  "currency", "grand_total", "discount_total", "promotion_rule", "section_break_1", "items"
+ ],
+ "fields": [
+  {"fieldname": "sales_channel", "fieldtype": "Link", "in_list_view": 1, "label": "Sales Channel", "options": "Sales Channel", "reqd": 1},
+  {"fieldname": "customer", "fieldtype": "Link", "in_list_view": 1, "label": "Customer", "options": "Customer"},
+  {"description": "Set for guest carts identified only by a storefront session/cookie", "fieldname": "session_id", "fieldtype": "Data", "label": "Guest Session ID"},
+  {"default": "Open", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Open\nCheckout In Progress\nConverted\nAbandoned\nExpired"},
+  {"fieldname": "column_break_1", "fieldtype": "Column Break"},
+  {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "Currency"},
+  {"fieldname": "grand_total", "fieldtype": "Currency", "in_list_view": 1, "label": "Grand Total", "read_only": 1},
+  {"fieldname": "discount_total", "fieldtype": "Currency", "label": "Discount Total", "read_only": 1},
+  {"fieldname": "promotion_rule", "fieldtype": "Link", "label": "Applied Promotion", "options": "Promotion Rule"},
+  {"fieldname": "section_break_1", "fieldtype": "Section Break", "label": "Items"},
+  {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "Cart Item"}
+ ],
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Advanced Commerce",
+ "name": "Cart",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "Commerce Manager", "share": 1, "write": 1},
+  {"create": 1, "read": 1, "write": 1, "role": "Commerce API", "if_owner": 1}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

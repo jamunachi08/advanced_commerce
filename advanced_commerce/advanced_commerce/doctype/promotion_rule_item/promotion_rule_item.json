@@ -1,0 +1,8 @@
+{
+ "actions": [], "creation": "2026-01-01 00:00:00", "doctype": "DocType", "engine": "InnoDB",
+ "field_order": ["item_code"],
+ "fields": [{"fieldname": "item_code", "fieldtype": "Link", "in_list_view": 1, "label": "Item", "options": "Item", "reqd": 1}],
+ "istable": 1, "links": [], "modified": "2026-01-01 00:00:00", "modified_by": "Administrator",
+ "module": "Advanced Commerce", "name": "Promotion Rule Item", "owner": "Administrator",
+ "permissions": [], "sort_field": "modified", "sort_order": "DESC", "states": []
+}
